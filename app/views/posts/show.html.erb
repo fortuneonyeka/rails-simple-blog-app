@@ -1,2 +1,10 @@
+<div>
 <h2><%= @post.title%></h2>
 <p><%= @post.body%></p>
+<hr>
+ <%= link_to "Edit Post", edit_post_path(@post), {:class => "text-decoration-none text-success"}%>
+ <%= link_to "Delete Post",post_path(@post), 
+                        method: :delete,
+                        data: {confirm: "Are you sure?"},
+                            :class => "text-decoration-none text-danger mx-3"%>
+</div>

@@ -62,3 +62,7 @@ h1 {
          border-radius: 5px;
   
 }
+
+.well {  -webkit-box-shadow: 0 0 10px gainsboro;
+  box-shadow: 0 0 10px gainsboro;
+  border-radius: 5px; }

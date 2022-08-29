@@ -1,6 +1,6 @@
 <h1>Blog Posts</h1>
 <% @posts.each do |post| %>
-<div class="well fs-5 mx-auto w-50 p-4">
+<div class="well mb-4 fs-5 mx-auto w-50 p-4">
     <h3 ><%= post.title %></h3>
     <p><%= post.body %></p>
     <%= link_to "Read More", post_path(post), {:class => "text-decoration-none text-success"}%>

@@ -63,6 +63,11 @@ h1 {
   
 }
 
-.well {  -webkit-box-shadow: 0 0 10px gainsboro;
+.well { 
+   -webkit-box-shadow: 0 0 10px gainsboro;
   box-shadow: 0 0 10px gainsboro;
-  border-radius: 5px; }
+  border-radius: 5px; 
+  background-color: rgb(251, 251, 248);
+}
+
+  

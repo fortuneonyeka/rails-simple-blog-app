@@ -7,30 +7,9 @@
                         method: :delete,
                         data: {confirm: "Are you sure?"},
                             :class => "text-decoration-none text-danger mx-3"%>
+ <%# <%= link_to "Add comment", post_comment_path(@post), {:class => "text-decoration-none text-success"}%> 
 </div>
 
 <hr>
-<div>
-<h1>Comments</h1>
-<% @post.comments.each do |comment| %>
-<div class=" fs-5 mx-auto w-50">
-<p><strong><%= comment.username%></strong>: <%= comment.body%></p>
-</div>
-</div>
-<%end%>
-<div class="well fs-5 mx-auto w-50 p-4 mb-4">
-<h3>Add Comment</h3>
-<%= form_for([@post, @post.comments.build]) do |f| %>
-<p>
-    <%= f.label :username %><br>
-    <%= f.text_field(:username, {:class => "form-control"})%>
-</p>
-<p>
-    <%= f.label :body %><br>
-    <%= f.text_area(:body, {:class => "form-control"})%>
-</p>
-<p>
-    <%= f.submit({:class => " btn"})%>
-</p>
-<%end%>
-</div>
+<%= render "comments/comments"%>
+<%= render "comments/comment_form"%>

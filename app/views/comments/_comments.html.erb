@@ -1,12 +1,12 @@
 <div>
 <h1>Comments</h1>
 <% @post.comments.each do |comment| %>
-<div class=" fs-5 mx-auto w-50">
+<div class=" fs-5 mx-auto w-50 my-4">
 <p><strong><%= comment.username%></strong>: <%= comment.body%></p>
  <%= link_to "Delete Comment",[comment.post, comment], 
                         method: :delete,
                         data: {confirm: "Are you sure?"},
-                            :class => "text-decoration-none text-danger mx-3"%>
+                            :class => "text-decoration-none text-danger"%>
 </div>
 </div>
 <%end%>
